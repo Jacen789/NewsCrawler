@@ -107,4 +107,4 @@ venv.bak/
 .idea/
 
 # Default news data directory
-data/news/*
+news/*

@@ -103,6 +103,7 @@ def get_sina_latest_news(template_url, top=80, show_content=False):
             rt_str = datetime.strftime(rt, '%Y-%m-%d %H:%M')
             row = [r['title'], rt_str, r['url']]
             if show_content:
+                print('downloading %s' % r['url'])
                 row.append(latest_content('sina', r['url']))
             data.append(row)
         df = pd.DataFrame(data, columns=LATEST_COLS_C if show_content else LATEST_COLS)
@@ -129,6 +130,7 @@ def get_sohu_latest_news(template_url, top=80, show_content=False):
             r_url = 'http://www.sohu.com/a/' + str(r['id']) + '_' + str(r['authorId'])
             row = [r['title'], rt_str, r_url]
             if show_content:
+                print('downloading %s' % r_url)
                 row.append(latest_content('sohu', r_url))
             data.append(row)
         df = pd.DataFrame(data, columns=LATEST_COLS_C if show_content else LATEST_COLS)
@@ -161,6 +163,7 @@ def get_xinhuanet_latest_news(template_url, top=80, show_content=False):
                 rt_str = datetime.strftime(rt, '%Y-%m-%d %H:%M')
                 row = [r['Title'], rt_str, r['LinkUrl']]
                 if show_content:
+                    print('downloading %s' % r['LinkUrl'])
                     row.append(latest_content('xinhuanet', r['LinkUrl']))
                 data.append(row)
         df = pd.DataFrame(data, columns=LATEST_COLS_C if show_content else LATEST_COLS)
