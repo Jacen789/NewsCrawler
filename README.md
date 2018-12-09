@@ -7,6 +7,10 @@ sina_template_url = 'http://roll.news.sina.com.cn/interface/rollnews_ch_out_inte
 sohu_template_url = 'http://v2.sohu.com/public-api/feed?scene=CHANNEL&sceneId=15&page=1&size={}'
 xinhuanet_template_url = 'http://qc.wa.news.cn/nodeart/list?nid=11147664&pgnum={}&cnt={}&tp=1&orderby=1'
 ```
+新浪财经新闻API(更新)抓取程序见[https://github.com/Jacen789/rolling-news](https://github.com/Jacen789/rolling-news)
+```
+sina_template_url = 'https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2516&k=&num=50&page={}&r={}'
+```
 
 ### 效果如图：
 ![效果2.png](./images/效果2.png)
